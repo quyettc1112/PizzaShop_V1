@@ -16,7 +16,6 @@ namespace PizzaShopDataAccess.Implementations
             _context = context;
         }
 
-       
-      
+     
     }
 }

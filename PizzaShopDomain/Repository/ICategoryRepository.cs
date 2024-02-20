@@ -10,5 +10,6 @@ namespace PizzaShopDomain.Repository
     public interface ICategoryRepository: IGenerticRepository<Category>
     {
        
+       
     }
 }

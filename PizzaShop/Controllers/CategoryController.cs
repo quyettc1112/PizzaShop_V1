@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PizzaShopDomain.Models;
 using PizzaShopDomain.Repository;
 
 namespace PizzaShop.Controllers
@@ -20,5 +21,8 @@ namespace PizzaShop.Controllers
            var cateFromRepo = _unitOfWork.CategoryRepository.GetAll();
             return Ok(cateFromRepo);
         }
+
+
+
     }
 }
