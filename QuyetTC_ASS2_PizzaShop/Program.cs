@@ -10,7 +10,7 @@ builder.Services.AddRazorPages();
 
 // Entity Framenwork
 builder.Services.AddDbContext<PizzaStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("PizzaShopConnection")));
-builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddTransient<UnitOfWork, UnitOfWork>();
 
 builder.Services.AddSession(options =>
 {

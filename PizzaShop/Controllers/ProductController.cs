@@ -15,7 +15,7 @@ namespace PizzaShop.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public ActionResult<IEnumerable<Product>> Get(string? productName = null, int? categoryId = null) {
             var products = _unitOfWork.ProductRepository.GetAll(query =>
             {
@@ -33,7 +33,7 @@ namespace PizzaShop.Controllers
                 return query;
             });
             return Ok(products);
-        }
+        }*/
 
         [HttpGet("{productId}")]
          public ActionResult GetProductId(int productId) {

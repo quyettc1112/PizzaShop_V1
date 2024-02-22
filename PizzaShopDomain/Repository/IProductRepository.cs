@@ -10,9 +10,9 @@ namespace PizzaShopDomain.Repository
 {
     public interface IProductRepository : IGenerticRepository<Product>
     {
-        public IEnumerable<Product> GetProductsByCategoryId(int categoryId);
+       /* public IEnumerable<Product> GetProductsByCategoryId(int categoryId);
 
-        IEnumerable<Product> GetAll(Func<IQueryable<Product>, IQueryable<Product>> query = null);
+        IEnumerable<Product> GetAll(Func<IQueryable<Product>, IQueryable<Product>> query = null);*/
 
 
     }

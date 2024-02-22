@@ -1,4 +1,5 @@
-﻿using PizzaShopDomain.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PizzaShopDomain.Models;
 using PizzaShopDomain.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,13 +11,14 @@ namespace PizzaShopDataAccess.Implementations
 {
     public class GenericRepository<T> : IGenerticRepository<T> where T : class
     {
-        public PizzaStoreContext _context = new PizzaStoreContext();
+        public DbContext _context;
+        private readonly DbSet<T> dbSet;
 
 
-
-        public GenericRepository(PizzaStoreContext context)
+        public GenericRepository(DbContext context)
         {
             _context = context;
+            this.dbSet = context.Set<T>();
         }   
 
         public void Add(T entity)
@@ -36,14 +38,10 @@ namespace PizzaShopDataAccess.Implementations
 
         public IEnumerable<T> GetAll()
         {
-            var entities = _context.Set<T>().ToList();
+            var entities = dbSet.ToList();
             foreach (var entity in entities)
             {
-                // Example: Check if any property of the entity is NULL and handle it appropriately
-                // Note: You might need reflection or some other mechanism to dynamically check properties
 
-                // For demonstration purposes, let's assume there's a property named 'Name' in the entity
-                // Replace 'Name' with the actual property name in your entity
                 var propertyInfo = typeof(T).GetProperty("ProductImage");
                 if (propertyInfo != null)
                 {

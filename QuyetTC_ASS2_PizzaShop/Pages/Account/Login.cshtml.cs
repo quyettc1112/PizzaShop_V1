@@ -12,14 +12,14 @@ namespace QuyetTC_ASS2_PizzaShop.Pages.Account
         [BindProperty]
         public Credential Credential { get; set; }
 
-
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UnitOfWork unitOfWork = new UnitOfWork();
 
-        public LoginModel(IUnitOfWork unitOfWork)
+        /*public LoginModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
 
-        }
+        }*/
 
         public void OnGet()
         {
@@ -27,7 +27,7 @@ namespace QuyetTC_ASS2_PizzaShop.Pages.Account
         }
 
         public IActionResult OnPost() {
-            bool isAuthenticated = _unitOfWork.AccountRepository.GetAll()
+            bool isAuthenticated = unitOfWork.GenAccountRepository.GetAll()
             .Any(a => a.UserName == Credential.Username && a.Password == Credential.Password);
 
             if (isAuthenticated)

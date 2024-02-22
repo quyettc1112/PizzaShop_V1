@@ -17,20 +17,22 @@ namespace PizzaShopDataAccess.Implementations
 
         public IEnumerable<Product> GetAll(Func<IQueryable<Product>, IQueryable<Product>> query = null)
         {
-            IQueryable<Product> productsQuery = _context.Products;
+            /*IQueryable<Product> productsQuery = _context.Products;
 
             // Thực hiện truy vấn tùy chỉnh nếu có
             if (query != null)
             {
                 productsQuery = query(productsQuery);
-            }
+            }*/
 
-            return productsQuery.ToList();
+            return null;
+           /* return productsQuery.ToList();*/
         }
 
         public IEnumerable<Product> GetProductsByCategoryId(int categoryId)
         {
-            return _context.Products.Where(p => p.CategoryId == categoryId).ToList();
+            /* return _context.Products.Where(p => p.CategoryId == categoryId).ToList();*/
+            return null;
         }
     }
 }
