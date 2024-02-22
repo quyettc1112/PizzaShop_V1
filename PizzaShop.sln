@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaShop", "PizzaShop\PizzaShop.csproj", "{35A76A04-6ED1-48DD-8751-A79AF7203D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShop", "PizzaShop\PizzaShop.csproj", "{35A76A04-6ED1-48DD-8751-A79AF7203D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaShopDomain", "PizzaShopDomain\PizzaShopDomain.csproj", "{D0F634DD-7DCB-4C0D-A471-63155741166D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShopDomain", "PizzaShopDomain\PizzaShopDomain.csproj", "{D0F634DD-7DCB-4C0D-A471-63155741166D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaShopDataAccess", "PizzaShopDataAccess\PizzaShopDataAccess.csproj", "{F451CB46-DCDA-420A-8F7D-E2966AEE1AD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShopDataAccess", "PizzaShopDataAccess\PizzaShopDataAccess.csproj", "{F451CB46-DCDA-420A-8F7D-E2966AEE1AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuyetTC_ASS2_PizzaShop", "QuyetTC_ASS2_PizzaShop\QuyetTC_ASS2_PizzaShop.csproj", "{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F451CB46-DCDA-420A-8F7D-E2966AEE1AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F451CB46-DCDA-420A-8F7D-E2966AEE1AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F451CB46-DCDA-420A-8F7D-E2966AEE1AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,7 +10,7 @@ namespace PizzaShopDataAccess.Implementations
 {
     public class GenericRepository<T> : IGenerticRepository<T> where T : class
     {
-        public PizzaStoreContext _context;
+        public PizzaStoreContext _context = new PizzaStoreContext();
 
 
         public GenericRepository(PizzaStoreContext context)

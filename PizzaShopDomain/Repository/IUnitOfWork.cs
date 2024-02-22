@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PizzaShopDomain.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace PizzaShopDomain.Repository
 {
     public interface IUnitOfWork : IDisposable
     {
-        IAccountRepository AccountRepository { get; }   
+        IGenerticRepository<Account> AccountRepository { get; }   
         ICategoryRepository CategoryRepository { get; } 
         ICustomerRepository CustomerRepository { get; }
         IOrderRepository OrderRepository { get; }

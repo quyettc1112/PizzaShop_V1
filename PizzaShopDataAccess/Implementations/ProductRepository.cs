@@ -13,7 +13,6 @@ namespace PizzaShopDataAccess.Implementations
         public ProductRepository(PizzaStoreContext context): base(context) { 
 
 
-
         }
 
         public IEnumerable<Product> GetAll(Func<IQueryable<Product>, IQueryable<Product>> query = null)
