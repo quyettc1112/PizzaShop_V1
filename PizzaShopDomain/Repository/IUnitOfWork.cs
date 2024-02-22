@@ -9,7 +9,7 @@ namespace PizzaShopDomain.Repository
 {
     public interface IUnitOfWork : IDisposable
     {
-        IGenerticRepository<Account> AccountRepository { get; }   
+        IAccountRepository AccountRepository { get; }   
         ICategoryRepository CategoryRepository { get; } 
         ICustomerRepository CustomerRepository { get; }
         IOrderRepository OrderRepository { get; }

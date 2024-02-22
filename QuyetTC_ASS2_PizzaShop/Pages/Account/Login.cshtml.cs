@@ -11,15 +11,15 @@ namespace QuyetTC_ASS2_PizzaShop.Pages.Account
     {
         [BindProperty]
         public Credential Credential { get; set; }
-   
 
-        private readonly IUnitOfWork _unitOfWork = new UnitOfWork();
 
-       /* public LoginModel(IUnitOfWork unitOfWork)
+        private readonly IUnitOfWork _unitOfWork;
+
+        public LoginModel(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-     
-        }*/
+
+        }
 
         public void OnGet()
         {

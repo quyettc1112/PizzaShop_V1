@@ -15,7 +15,7 @@ namespace PizzaShopDataAccess.Implementations
 
         private IGenerticRepository<Account> accountRepository;
 
-       /* public UnitOfWork(PizzaStoreContext context)
+        public UnitOfWork(PizzaStoreContext context)
         {
             _context = context;
 
@@ -26,14 +26,15 @@ namespace PizzaShopDataAccess.Implementations
             orderDetailReposotory = new OrderDetailRepository(_context);
             CategoryRepository = new CategoryRepository(_context);
 
-        }*/
+        }
 
-        public IGenerticRepository<Account> AccountRepository {
+        /*public IGenerticRepository<Account> AccountRepository {
             get {   if (accountRepository == null) { accountRepository = new GenericRepository<Account>(_context); }
                 return accountRepository;
             }
-        }
+        }*/
 
+        public IAccountRepository AccountRepository { get; private set; }
 
         public ICategoryRepository CategoryRepository { get; private set; }
 
@@ -47,7 +48,7 @@ namespace PizzaShopDataAccess.Implementations
 
         public ISupplierRepository SupplierRepository { get; private set; }
 
-       
+  
 
         public void Dispose()
         {

@@ -13,6 +13,7 @@ namespace PizzaShopDataAccess.Implementations
         public PizzaStoreContext _context = new PizzaStoreContext();
 
 
+
         public GenericRepository(PizzaStoreContext context)
         {
             _context = context;
