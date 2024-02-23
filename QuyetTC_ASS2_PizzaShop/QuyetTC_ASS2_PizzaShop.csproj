@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PizzaShopDataAccess\PizzaShopDataAccess.csproj" />
     <ProjectReference Include="..\PizzaShopDomain\PizzaShopDomain.csproj" />
     <ProjectReference Include="..\PizzaShop\PizzaShop.csproj" />
   </ItemGroup>

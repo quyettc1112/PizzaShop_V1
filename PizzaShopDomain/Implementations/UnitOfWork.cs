@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDataAccess.Implementations
+namespace PizzaShopDomain.Implementations
 {
     public class UnitOfWork : IUnitOfWork
     {

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PizzaShopDataAccess.Implementations;
+using PizzaShopDomain.Implementations;
 using PizzaShopDomain.Models;
 using PizzaShopDomain.Repository;
 

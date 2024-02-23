@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PizzaShopDomain.DTO;
+using PizzaShopDomain.Implementations;
 using PizzaShopDomain.Models;
 using PizzaShopDomain.Repository;
 
@@ -10,12 +11,9 @@ namespace PizzaShop.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly IUnitOfWork _unitOfWork;
-        public ProductController(IUnitOfWork unitOfWork) {
-            _unitOfWork = unitOfWork;
-        }
+        private readonly UnitOfWork _unitOfWork = new UnitOfWork();
 
-        /*[HttpGet]
+       /* [HttpGet]
         public ActionResult<IEnumerable<Product>> Get(string? productName = null, int? categoryId = null) {
             var products = _unitOfWork.ProductRepository.GetAll(query =>
             {
