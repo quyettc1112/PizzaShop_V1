@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PizzaShopDomain\PizzaShopDomain.csproj" />
+    <ProjectReference Include="..\PizzaShopDomain\QuyetTC_ASS2_Repository.csproj" />
     <ProjectReference Include="..\PizzaShop\PizzaShop.csproj" />
   </ItemGroup>
 

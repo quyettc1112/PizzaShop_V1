@@ -15,12 +15,12 @@ namespace PizzaShop.Controllers
             _unitOfWork = unitOfWork;
         }
 
-        [HttpGet]
+       /* [HttpGet]
         public ActionResult Get()
         {
            var cateFromRepo = _unitOfWork.CategoryRepository.GetAll();
             return Ok(cateFromRepo);
-        }
+        }*/
 
 
 

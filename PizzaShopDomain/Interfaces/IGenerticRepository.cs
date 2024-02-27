@@ -10,7 +10,6 @@ namespace PizzaShopDomain.Repository
     public interface IGenerticRepository<T> where T : class
     {
         T GetByID(int id);
-        IEnumerable<T> GetAll();
         IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
 
         void Add(T entity);

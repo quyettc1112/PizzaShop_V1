@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace QuyetTC_ASS2_PizzaShop.Pages
@@ -15,7 +16,20 @@ namespace QuyetTC_ASS2_PizzaShop.Pages
 
         public void OnGet()
         {
+            if (HttpContext.Session.GetString("UserId") == null)
+            {
+                Response.Redirect("/Account/Login");
+            }
+        }
+
+        public IActionResult Logout()
+        {
            
+            HttpContext.Session.Clear();
+            HttpContext.SignOutAsync();
+
+           
+            return RedirectToAction("/Account/Login");
         }
     }
 }

@@ -16,12 +16,11 @@ namespace QuyetTC_ASS2_PizzaShop.Pages.Account
 
         public void OnGet()
         {
-            this.Credential = new Credential { Username = "tranquyet" };
+            //this.Credential = new Credential { Username = "tranquyet" };
         }
 
         public IActionResult OnPost() {
-            bool isAuthenticated = unitOfWork.AccountRepository.GetAll()
-            .Any(a => a.UserName == Credential.Username && a.Password == Credential.Password);
+            bool isAuthenticated = unitOfWork.AccountRepository.Find(a => a.UserName == Credential.Username && a.Password == Credential.Password).Any();
 
             if (isAuthenticated)
             {

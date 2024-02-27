@@ -23,7 +23,8 @@ namespace PizzaShopDomain.Implementations
 
   
 
-        public IGenerticRepository<Account> AccountRepository {
+        public IGenerticRepository<Account> AccountRepository
+        {
             get
             {
                 if (accountRepository == null)
@@ -34,7 +35,8 @@ namespace PizzaShopDomain.Implementations
             }
         }
 
-        public IGenerticRepository<Category> CategoryRepository { 
+        public IGenerticRepository<Category> CategoryRepository 
+        { 
             get
             {
                 if (categoryRepository == null) {

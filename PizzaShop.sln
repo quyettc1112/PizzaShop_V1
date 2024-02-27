@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShop", "PizzaShop\PizzaShop.csproj", "{35A76A04-6ED1-48DD-8751-A79AF7203D41}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShopDomain", "PizzaShopDomain\PizzaShopDomain.csproj", "{D0F634DD-7DCB-4C0D-A471-63155741166D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuyetTC_ASS2_Repository", "PizzaShopDomain\QuyetTC_ASS2_Repository.csproj", "{D0F634DD-7DCB-4C0D-A471-63155741166D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuyetTC_ASS2_PizzaShop", "QuyetTC_ASS2_PizzaShop\QuyetTC_ASS2_PizzaShop.csproj", "{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}"
 EndProject

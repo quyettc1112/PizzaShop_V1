@@ -4,6 +4,7 @@ using PizzaShopDomain.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,65 +20,91 @@ namespace PizzaShopDomain.Implementations
         {
             _context = context;
             this.dbSet = context.Set<T>();
-        }   
+        }
+
+
+
+        // Updated Get method with pagination
+        public virtual IEnumerable<T> Get(
+            Expression<Func<T, bool>> filter = null,
+            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+            string includeProperties = "",
+            int? pageIndex = null, // Optional parameter for pagination (page number)
+            int? pageSize = null)  // Optional parameter for pagination (number of records per page)
+        {
+            IQueryable<T> query = dbSet;
+
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
+            foreach (var includeProperty in includeProperties.Split
+                (new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProperty);
+            }
+
+            if (orderBy != null)
+            {
+                query = orderBy(query);
+            }
+
+            // Implementing pagination
+            if (pageIndex.HasValue && pageSize.HasValue)
+            {
+                // Ensure the pageIndex and pageSize are valid
+                int validPageIndex = pageIndex.Value > 0 ? pageIndex.Value - 1 : 0;
+                int validPageSize = pageSize.Value > 0 ? pageSize.Value : 10; // Assuming a default pageSize of 10 if an invalid value is passed
+
+                query = query.Skip(validPageIndex * validPageSize).Take(validPageSize);
+            }
+
+            return query.ToList();
+        }
+
+
 
         public void Add(T entity)
         {
-            _context.Set<T>().Add(entity);
+            dbSet.Add(entity);
         }
 
         public void AddRange(IEnumerable<T> entities)
         {
-           _context.Set<T>().AddRange(entities);
+           dbSet.AddRange(entities);
         }
 
         public IEnumerable<T> Find(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
         {
-           return  _context.Set<T>().Where(predicate);
+           return  dbSet.Where(predicate);
         }
 
-        public IEnumerable<T> GetAll()
-        {
-            var entities = dbSet.ToList();
-            foreach (var entity in entities)
-            {
-
-                var propertyInfo = typeof(T).GetProperty("ProductImage");
-                if (propertyInfo != null)
-                {
-                    var value = propertyInfo.GetValue(entity);
-                    if (value == null)
-                    {
-                        // Handle the NULL value here, such as setting a default value or logging the issue
-                        // For demonstration, let's just set it to an empty string
-                        propertyInfo.SetValue(entity, "");
-                    }
-                }
-            }
-
-            return entities;
-        }
+       
 
         public T GetByID(int id)
         {
-            return _context.Set<T>().Find(id);
+            return dbSet.Find(id);
         }
 
         public void Remove(T entity)
         {
-            _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            if (_context.Entry(entity).State == EntityState.Detached)
+            {
+                dbSet.Attach(entity);
+            }
+            dbSet.Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<T> entities)
         {
-            _context.Set<T>().RemoveRange(entities);
+            dbSet.RemoveRange(entities);
         }
 
         public void Update(T entity)
         {
-            _context.Set<T>().Update(entity);
-            _context.SaveChanges();
+            dbSet.Attach(entity);
+            _context.Entry(entity).State = EntityState.Modified;
         }
     }
 }
