@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
-namespace PizzaShopDomain.Models
+namespace QuyetTC_ASS2_Repository.Models
 {
     public partial class PizzaStoreContext : DbContext
     {
@@ -32,6 +33,9 @@ namespace PizzaShopDomain.Models
                 optionsBuilder.UseSqlServer("Server=LAPTOP-JS93416P;Database=PizzaStore;User=sa;Password=12345;");
             }
         }
+
+       
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PizzaShopDomain.Models
+namespace QuyetTC_ASS2_Repository.Models
 {
-    public partial class Account
+    public class Account
     {
         public int AccountId { get; set; }
         public string UserName { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PizzaShopDomain.Models
+namespace QuyetTC_ASS2_Repository.Models
 {
     public partial class Category
     {

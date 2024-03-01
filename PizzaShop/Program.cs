@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using PizzaShopDomain.Implementations;
-using PizzaShopDomain.Models;
-using PizzaShopDomain.Repository;
+using QuyetTC_ASS2_Repository.Implementations;
+using QuyetTC_ASS2_Repository.Models;
+using QuyetTC_ASS2_Repository.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 

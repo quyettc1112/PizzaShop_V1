@@ -1,0 +1,33 @@
+﻿@page
+@model QuyetTC_ASS2_PizzaShop.Pages.AccountPage.AccountManagerModel
+@{
+}
+
+<h1>List of Accounts</h1>
+
+@if (Model.Accounts != null && Model.Accounts.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>AccountId</th>
+                <th>Email</th>
+                <!-- Thêm các cột khác nếu cần -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var account in Model.Accounts)
+            {
+                <tr>
+                    <td>@account.AccountId</td>
+                    <td>@account.UserName</td>
+                    <!-- Thêm các ô dữ liệu khác nếu cần -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No accounts found.</p>
+}

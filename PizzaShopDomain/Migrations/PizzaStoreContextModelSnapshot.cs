@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PizzaShopDomain.Models;
+using QuyetTC_ASS2_Repository.Models;
 
 #nullable disable
 
-namespace PizzaShopDomain.Migrations
+namespace QuyetTC_ASS2_Repository.Migrations
 {
     [DbContext(typeof(PizzaStoreContext))]
     partial class PizzaStoreContextModelSnapshot : ModelSnapshot

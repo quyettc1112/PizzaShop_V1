@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PizzaShopDomain.Models;
-using PizzaShopDomain.Repository;
+using QuyetTC_ASS2_Repository.Models;
+using QuyetTC_ASS2_Repository.Repository;
 
 namespace PizzaShop.Controllers
 {

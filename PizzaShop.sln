@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaShop", "PizzaShop\Pizz
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuyetTC_ASS2_Repository", "PizzaShopDomain\QuyetTC_ASS2_Repository.csproj", "{D0F634DD-7DCB-4C0D-A471-63155741166D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuyetTC_ASS2_PizzaShop", "QuyetTC_ASS2_PizzaShop\QuyetTC_ASS2_PizzaShop.csproj", "{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuyetTC_ASS2_PizzaShopWeb", "QuyetTC_ASS2_PizzaShopWeb\QuyetTC_ASS2_PizzaShopWeb.csproj", "{3F81155F-A9FA-40FA-9BC9-6176D2C73621}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{D0F634DD-7DCB-4C0D-A471-63155741166D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0F634DD-7DCB-4C0D-A471-63155741166D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0F634DD-7DCB-4C0D-A471-63155741166D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC0493A0-C400-43B6-BCE9-0BF6E71E1323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F81155F-A9FA-40FA-9BC9-6176D2C73621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F81155F-A9FA-40FA-9BC9-6176D2C73621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F81155F-A9FA-40FA-9BC9-6176D2C73621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F81155F-A9FA-40FA-9BC9-6176D2C73621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

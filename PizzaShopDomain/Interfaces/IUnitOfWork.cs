@@ -1,11 +1,11 @@
-﻿using PizzaShopDomain.Models;
+﻿using QuyetTC_ASS2_Repository.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDomain.Repository
+namespace QuyetTC_ASS2_Repository.Repository
 {
     public interface IUnitOfWork : IDisposable
     {

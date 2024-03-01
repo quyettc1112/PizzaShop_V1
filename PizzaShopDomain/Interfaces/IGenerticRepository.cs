@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDomain.Repository
+namespace QuyetTC_ASS2_Repository.Repository
 {
     public interface IGenerticRepository<T> where T : class
     {
@@ -18,5 +18,12 @@ namespace PizzaShopDomain.Repository
         void RemoveRange(IEnumerable<T> entities);
 
         void Update(T entity);
+
+        public IEnumerable<T> GetPagination(
+         Expression<Func<T, bool>> filter = null,
+        Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
+         string includeProperties = "",
+        int? pageIndex = null, // Optional parameter for pagination (page number)
+        int? pageSize = null);
     }
 }

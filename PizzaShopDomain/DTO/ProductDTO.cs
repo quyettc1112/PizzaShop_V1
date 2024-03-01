@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDomain.DTO
+namespace QuyetTC_ASS2_Repository.DTO
 {
     public class ProductDTO
     {

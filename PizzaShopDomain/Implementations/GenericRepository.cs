@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PizzaShopDomain.Models;
-using PizzaShopDomain.Repository;
+using QuyetTC_ASS2_Repository.Models;
+using QuyetTC_ASS2_Repository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDomain.Implementations
+namespace QuyetTC_ASS2_Repository.Implementations
 {
     public class GenericRepository<T> : IGenerticRepository<T> where T : class
     {
@@ -22,15 +22,12 @@ namespace PizzaShopDomain.Implementations
             this.dbSet = context.Set<T>();
         }
 
-
-
-        // Updated Get method with pagination
-        public virtual IEnumerable<T> Get(
-            Expression<Func<T, bool>> filter = null,
-            Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
-            string includeProperties = "",
-            int? pageIndex = null, // Optional parameter for pagination (page number)
-            int? pageSize = null)  // Optional parameter for pagination (number of records per page)
+        public IEnumerable<T> GetPagination(
+            Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, 
+                IOrderedQueryable<T>> orderBy = null,
+            string includeProperties = "", 
+            int? pageIndex = null, int? 
+            pageSize = null)
         {
             IQueryable<T> query = dbSet;
 
@@ -64,6 +61,10 @@ namespace PizzaShopDomain.Implementations
         }
 
 
+        // Updated Get method with pagination
+       
+
+
 
         public void Add(T entity)
         {
@@ -80,8 +81,7 @@ namespace PizzaShopDomain.Implementations
            return  dbSet.Where(predicate);
         }
 
-       
-
+      
         public T GetByID(int id)
         {
             return dbSet.Find(id);
@@ -106,5 +106,7 @@ namespace PizzaShopDomain.Implementations
             dbSet.Attach(entity);
             _context.Entry(entity).State = EntityState.Modified;
         }
+
+     
     }
 }

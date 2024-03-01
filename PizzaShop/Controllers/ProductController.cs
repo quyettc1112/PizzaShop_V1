@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PizzaShopDomain.DTO;
-using PizzaShopDomain.Implementations;
-using PizzaShopDomain.Models;
-using PizzaShopDomain.Repository;
+using QuyetTC_ASS2_Repository.DTO;
+using QuyetTC_ASS2_Repository.Implementations;
+using QuyetTC_ASS2_Repository.Models;
+using QuyetTC_ASS2_Repository.Repository;
 
 namespace PizzaShop.Controllers
 {

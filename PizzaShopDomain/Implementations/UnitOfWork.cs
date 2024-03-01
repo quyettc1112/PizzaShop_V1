@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PizzaShopDomain.Models;
-using PizzaShopDomain.Repository;
+using QuyetTC_ASS2_Repository.Models;
+using QuyetTC_ASS2_Repository.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PizzaShopDomain.Implementations
+namespace QuyetTC_ASS2_Repository.Implementations
 {
     public class UnitOfWork : IUnitOfWork
     {

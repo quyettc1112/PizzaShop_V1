@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PizzaShopDomain.Migrations
+namespace QuyetTC_ASS2_Repository.Migrations
 {
     public partial class CreatingDb : Migration
     {

@@ -12,7 +12,7 @@
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "launchUrl": "account/login",
+      "launchUrl": "accountpage/login",
       "applicationUrl": "https://localhost:7248",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
